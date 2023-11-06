@@ -52,4 +52,15 @@ public class GerenciadorDeNotasTest {
         assertEquals(7.0, menorNota, 0.001);
     }
 
+    @Test
+    public void testEncontrarMenorNotaErro() {
+        gerenciador.adicionarNota(8.5);
+        gerenciador.adicionarNota(9.2);
+        gerenciador.adicionarNota(7.0);
+        double menorNota = gerenciador.encontrarMenorNota();
+        assertEquals(8.0, menorNota, 0.001);
+    }
+
+
+
 }
